@@ -1,8 +1,6 @@
-﻿using AITech.Entity.Entities.Common;
-
-namespace AITech.Entity.Entities
+﻿namespace AITech.WebUI.DTOs.BannerDtos
 {
-    public class Banner: BaseEntity
+    public class CreateBannerDto
     {
         public string Title { get; set; }
         public string Description { get; set; }

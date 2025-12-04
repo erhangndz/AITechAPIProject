@@ -2,7 +2,23 @@
     ViewData["Title"] = "Home Page";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
-</div>
+<form method="post">
+
+
+    <label>Prompt Girin:</label>
+    <input type="text" name="prompt" class="form-control" required/>
+    <br />
+    <button class="btn btn-primary">Gönder</button>
+</form>
+
+
+@if(ViewBag.response != null)
+{
+    <div class="alert alert-info">
+        <strong>Gelen Yanıt:</strong>
+        <br />
+        <p>
+            @ViewBag.response
+        </p>
+    </div>
+}

@@ -1,4 +1,5 @@
-﻿using AITech.DataAccess.Repositories.CategoryRepositories;
+﻿using AITech.DataAccess.Repositories.BannerRepositories;
+using AITech.DataAccess.Repositories.CategoryRepositories;
 using AITech.DataAccess.Repositories.ProjectRepositories;
 using AITech.DataAccess.UnitOfWorks;
 using Microsoft.Extensions.DependencyInjection;
@@ -13,6 +14,7 @@ namespace AITech.DataAccess.Extensions
         {
             services.AddScoped<ICategoryRepository,CategoryRepository>();
             services.AddScoped<IProjectRepository,ProjectRepository>();
+            services.AddScoped<IBannerRepository,BannerRepository>();
 
             services.AddScoped<IUnitOfWork, UnitOfWork>();
         }
